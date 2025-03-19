@@ -1,1 +1,1 @@
-# I HATE NIGGERS
+# I Hate School Blocking
