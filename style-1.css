@@ -1,0 +1,69 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body {
+    text-align: center;
+    background: url('https://cdn.photoroom.com/v2/image-cache?path=gs://background-7ef44.appspot.com/backgrounds_v3/black/08_-_black.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+}
+.loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: red;
+    z-index: 9999;
+}
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    display: none;
+}
+.search-bar {
+    width: 80%;
+    padding: 10px;
+    margin: 15px auto;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    display: block;
+    text-align: center;
+}
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+.game {
+    background: #222;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.game:hover {
+    background: red;
+}
+.game img {
+    width: 100%;
+    border-radius: 5px;
+}
+.game a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-top: 5px;
+}
+.credits {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+}
