@@ -28,7 +28,7 @@ setTimeout(() => {
 // Admin panel access
 function showAdminPanel() {
     const password = prompt("Enter Admin Password:");
-    if (password === "yourSecretPassword") {
+    if (password === "FUCK SCHOOL") {
         document.getElementById('adminPanel').style.display = 'block';
         updateAdminPanel();
     } else {
