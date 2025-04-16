@@ -1,78 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Graveyard - Play the Best Games Online" />
-  <title>Graveyard Hub</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Graveyard - Play the Best Games Online">
+    <title>Graveyard Hub</title>
+    <link rel="stylesheet" href="ADMIN.css">
 </head>
 <body>
-  <!-- 🔴 Loading Screen -->
-  <div class="loading-screen" id="loadingScreen">
-    <div class="loading-content">
-      <p class="loading-text">🚀 Loading Graveyard Hub... made by <strong>TIXU</strong></p>
-      <div class="wrapper">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="shadow"></div>
-        <div class="shadow"></div>
-        <div class="shadow"></div>
-      </div>
-    </div>
-  </div>
 
-  <!-- 🔥 Main Content -->
-  <div class="container" id="mainContent">
-    <h1>GraveYards Made By TIXU</h1>
-    <p>Play the best games online for free!</p>
+    <!-- Loading screen -->
+    <div class="loading-screen" id="loadingScreen">🚀 Loading graveyard Hub... made from tixu</div>
 
-    <input type="text" id="search" class="search-bar" placeholder="🔍 Search for a game..." onkeyup="searchGames()">
+    <!-- Main content -->
+    <div class="container" id="mainContent">
+        <h1>GraveYards Made By tixu</h1>
+        <p>Play the best games online for free!</p>
 
-    <h2>🔥 Popular Games</h2>
-    <div class="game-grid" id="gameGrid">
-      <div class="game">
-        <img src="https://www.onlinegames.io/media/posts/364/responsive/Archer-Hero-Online-xs.jpg" alt="Game 1">
-        <a href="https://www.onlinegames.io/games/2023/unity/archer-hero/index.html">🚀 Play Game 1</a>
-      </div>
-      <div class="game">
-        <img src="https://www.onlinegames.io/media/posts/740/responsive/Crazy-Karts-xs.jpg" alt="Game 2">
-        <a href="https://www.onlinegames.io/games/2024/unity/crazy-karts/index.html">⚡ Play Game 2</a>
-      </div>
-      <div class="game">
-        <img src="https://www.onlinegames.io/media/posts/330/responsive/Cat-Simulator-Online-xs.jpg" alt="Game 3">
-        <a href="https://www.onlinegames.io/games/2022/unity4/cat-simulator/index.html">🔥 Play Game 3</a>
-      </div>
-      <div class="game">
-        <img src="https://www.onlinegames.io/media/posts/971/responsive/Cookie-Clicker-Pro-Game-xs.jpg" alt="Game 4">
-        <a href="https://cloud.onlinegames.io/games/2025/unity/cookie-clicker-pro/index-og.html">🎯 Play Game 4</a>
-      </div>
-      <div class="game">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiX-_uMkKQoVPggcWJ6GtHGgtkXZu9FsMzD-8op5nUug&s" alt="Math Cheat">
-        <a href="a1">🎯 Math Cheater</a>
-      </div>
+        <!-- Search bar -->
+        <input type="text" id="search" class="search-bar" placeholder="🔍 Search for a game..." onkeyup="searchGames()">
+
+        <!-- Popular games -->
+        <h2>🔥 Popular Games</h2>
+        <div class="game-grid" id="gameGrid">
+            <div class="game" data-id="1">
+                <img src="https://www.onlinegames.io/media/posts/364/responsive/Archer-Hero-Online-xs.jpg" alt="Game 1">
+                <a href="https://www.onlinegames.io/games/2023/unity/archer-hero/index.html" onclick="trackClick('Game 1')">🚀 Play Game 1</a>
+            </div>
+            <div class="game" data-id="2">
+                <img src="https://www.onlinegames.io/media/posts/740/responsive/Crazy-Karts-xs.jpg" alt="Game 2">
+                <a href="https://www.onlinegames.io/games/2024/unity/crazy-karts/index.html" onclick="trackClick('Game 2')">⚡ Play Game 2</a>
+            </div>
+            <div class="game" data-id="3">
+                <img src="https://www.onlinegames.io/media/posts/330/responsive/Cat-Simulator-Online-xs.jpg" alt="Game 3">
+                <a href="https://www.onlinegames.io/games/2022/unity4/cat-simulator/index.html" onclick="trackClick('Game 3')">🔥 Play Game 3</a>
+            </div>
+            <div class="game" data-id="4">
+                <img src="https://www.onlinegames.io/media/posts/971/responsive/Cookie-Clicker-Pro-Game-xs.jpg" alt="Game 4">
+                <a href="https://cloud.onlinegames.io/games/2025/unity/cookie-clicker-pro/index-og.html" onclick="trackClick('Game 4')">🎯 Play Game 4</a>
+            </div>
+            <div class="game" data-id="5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiX-_uMkKQoVPggcWJ6GtHGgtkXZu9FsMzD-8op5nUug&s" alt="Math Cheat">
+                <a href="a1" onclick="trackClick('Math Cheat')">🎯 Math Cheat</a>
+            </div>
+        </div>
+
+        <!-- Credits -->
+        <p class="credits">© 2025 Game Hub | Created by TIXU-RAMP</p>
+
+        <!-- Admin Panel Access -->
+        <button onclick="showAdminPanel()">Admin Panel (Secret)</button>
     </div>
 
-    <p class="credits">© 2025 Game Hub | Created by TIXU-RAMP</p>
-  </div>
+    <!-- Admin Panel -->
+    <div class="admin-panel" id="adminPanel" style="display: none;">
+        <h2>LOG panel</h2>
+        <p>Total Visits: <span id="totalVisits">0</span></p>
+        <p>Most Clicked Game: <span id="mostClickedGame">None</span></p>
+        <h3>Logs</h3>
+        <ul id="logs"></ul>
+        <button onclick="resetCounter()">Reset Counter</button>
+        <button onclick="resetLogs()">Reset Logs</button>
+    </div>
 
-  <script>
-    // Simple loading screen logic
-    window.addEventListener('load', () => {
-      document.getElementById('loadingScreen').style.display = 'none';
-      document.getElementById('mainContent').style.display = 'block';
-    });
-
-    function searchGames() {
-      const input = document.getElementById('search').value.toLowerCase();
-      const games = document.querySelectorAll('.game');
-
-      games.forEach(game => {
-        const text = game.textContent.toLowerCase();
-        game.style.display = text.includes(input) ? 'block' : 'none';
-      });
-    }
-  </script>
+    <script src="ADMIN.js"></script>
 </body>
 </html>
